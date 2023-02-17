@@ -34,4 +34,19 @@ void main(List<String> args) {
   const TIME = 1;
   final TIMEE = 1;
   print(TIME);
+
+  // TOÁN TỬ
+  int a = 1;
+  int b = 2;
+  print(a + b); //Cộng
+  print(a ~/ b); //Chia lấy phần nguyên
+  print(a % b); //Chia lấy phần dư
+
+  //Sử dụng vòng lặp
+
+  List<String> nameee = ['Duy', 'nam', 'long'];
+  for (var i = 0; i < nameee.length; i++) {
+    print(nameee[i]);
+  }
 }
+//Có thể sử dụng toán tử 3 ngôi giống JS
