@@ -1,3 +1,5 @@
+import 'book.dart';
+
 void main(List<String> args) {
   //Khai báo biến
   String name = "tinh";
@@ -64,5 +66,7 @@ void main(List<String> args) {
 
   print(tinhtong(1, 2));
 
-  ;
+  var MyBook = Book('Thoi trang', 2020);
+
+  print(MyBook.name);
 }
