@@ -1,72 +1,55 @@
-import 'book.dart';
+import 'package:flutter/material.dart';
 
 void main(List<String> args) {
-  //Khai báo biến
-  String name = "tinh";
-  int age = 18;
-  bool old = false;
-  double sum = 2.2;
+  runApp(const MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: MyApp(),
+  ));
+}
 
-  name = "ngtinhs";
-  age = 22;
-//Dynamic chấp nhận mọi kiểu, và có thể thay thế ví dụ
-  dynamic tuoi = 20;
-  dynamic ten = "ngtinhs"; //Lúc này dynamic chuyển thành string
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-//Var chấp nhận mọi kiểu, nhưng không thể thay thế
-
-  print(name);
-  print(age);
-  print(old);
-  print(sum);
-
-  //Khai báo biến một tập các đối tượng
-  List<String> namee = ['Duy', 'nam', 'long']; ////Ben trong list la kieu String
-  print(namee);
-
-  Map<String, String> obj = {
-    "name": "name",
-    "age": "age",
-    "old": "old"
-  }; //Key kiểu string và value kiểu string
-
-  print(obj);
-
-  //Khai báo hằng số
-  const TIME = 1;
-  final TIMEE = 1;
-  print(TIME);
-
-  // TOÁN TỬ
-  int a = 1;
-  int b = 2;
-  print(a + b); //Cộng
-  print(a ~/ b); //Chia lấy phần nguyên
-  print(a % b); //Chia lấy phần dư
-
-  //Sử dụng vòng lặp
-
-  List<String> nameee = ['Duy', 'nam', 'long'];
-  for (var i = 0; i < nameee.length; i++) {
-    print(nameee[i]);
-  }
-//Có thể sử dụng toán tử 3 ngôi giống JS
-
-//Function
-  void showHello() {
-    print("hello");
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(children: [
+        Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              boxMethod('Box 1', Alignment.bottomRight),
+              boxMethod('Box 2', Alignment.bottomLeft),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              boxMethod('Box 3', Alignment.topRight),
+              boxMethod('Box 4', Alignment.topLeft),
+            ],
+          ),
+        ]),
+        Center(child: boxMethod('Hello world', Alignment.center, true))
+      ]),
+    );
   }
 
-  showHello();
-
-//Vd2
-  int tinhtong(int a, int b) {
-    return a + b;
+  Container boxMethod(String name, Alignment direction,
+      [bool boxRadius = false]) {
+    return Container(
+      decoration: BoxDecoration(
+          color: boxRadius
+              ? const Color.fromARGB(255, 139, 178, 236)
+              : Colors.green,
+          borderRadius: BorderRadius.circular(boxRadius ? 80 : 0)),
+      alignment: direction,
+      width: 160,
+      height: 160,
+      child: Text(
+        name,
+        style: const TextStyle(fontSize: 24, color: Colors.pink),
+      ),
+    );
   }
-
-  print(tinhtong(1, 2));
-
-  var MyBook = Book('Thoi trang', 2020);
-
-  print(MyBook.name);
 }
