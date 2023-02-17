@@ -17,4 +17,21 @@ void main(List<String> args) {
   print(age);
   print(old);
   print(sum);
+
+  //Khai báo biến một tập các đối tượng
+  List<String> namee = ['Duy', 'nam', 'long']; ////Ben trong list la kieu String
+  print(namee);
+
+  Map<String, String> obj = {
+    "name": "name",
+    "age": "age",
+    "old": "old"
+  }; //Key kiểu string và value kiểu string
+
+  print(obj);
+
+  //Khai báo hằng số
+  const TIME = 1;
+  final TIMEE = 1;
+  print(TIME);
 }
