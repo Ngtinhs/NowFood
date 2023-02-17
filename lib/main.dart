@@ -48,5 +48,21 @@ void main(List<String> args) {
   for (var i = 0; i < nameee.length; i++) {
     print(nameee[i]);
   }
-}
 //Có thể sử dụng toán tử 3 ngôi giống JS
+
+//Function
+  void showHello() {
+    print("hello");
+  }
+
+  showHello();
+
+//Vd2
+  int tinhtong(int a, int b) {
+    return a + b;
+  }
+
+  print(tinhtong(1, 2));
+
+  ;
+}
