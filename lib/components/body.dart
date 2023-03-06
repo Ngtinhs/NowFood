@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import '../signin/signin_form.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -12,7 +13,7 @@ class Body extends StatelessWidget {
         child: Column(
           children: [
             headerScreen(context),
-            SignInFrom(),
+            const SignInForm(),
             footerScreen(context),
           ],
         ),
