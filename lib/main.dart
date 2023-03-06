@@ -1,4 +1,6 @@
+import 'package:app/splashPage.dart';
 import 'package:flutter/material.dart';
+import './splashPage.dart';
 
 void main(List<String> args) {
   runApp(const MaterialApp(
@@ -7,11 +9,30 @@ void main(List<String> args) {
   ));
 }
 
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return const Scaffold();
+//   }
+// }
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return MaterialApp(
+      title: 'My App',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('My App'),
+        ),
+        body: Center(
+          child: SplashPage(),
+        ),
+      ),
+    );
   }
 }
