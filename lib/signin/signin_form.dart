@@ -117,7 +117,7 @@ class _SignInFormState extends State<SignInForm> {
                     SizedBox(
                       height: 50,
                       width: MediaQuery.of(context).size.width,
-                      child: RaisedButton(
+                      child: ElevatedButton(
                         onPressed: () async {
                           if (_value) {
                             prefs = await SharedPreferences.getInstance();
@@ -129,15 +129,18 @@ class _SignInFormState extends State<SignInForm> {
 
                           Navigator.pushNamed(context, HomePage.routeName);
                         },
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        Color: Colors.green,
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                          backgroundColor: Colors.green,
+                        ),
                         child: const Text(
                           "Continue",
                           style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
