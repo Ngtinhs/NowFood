@@ -1,8 +1,10 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class ProductPage extends StatelessWidget {
+  static String routeName = "/product_page";
+
+  const ProductPage({super.key});
 
   @override
   Widget build(BuildContext context) {

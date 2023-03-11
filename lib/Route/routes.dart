@@ -1,6 +1,7 @@
 import 'dart:js';
 
 import 'package:app/cart/cartpage.dart';
+import 'package:app/detail/productpage.dart';
 import 'package:app/homepage/homepage.dart';
 import 'package:app/model/product.dart';
 import 'package:app/signup/signupsreen.dart';
@@ -13,7 +14,7 @@ final Map<String, WidgetBuilder> routes = {
   SplashPage.routeName: (context) => SplashPage(),
   SingInPage.routeName: (context) => SingInPage(),
   SignUpPage.routeName: (context) => SignUpPage(),
-  SplashPage.routeName: (context) => SplashPage(),
-  SplashPage.routeName: (context) => SplashPage(),
-  SplashPage.routeName: (context) => SplashPage(),
+  HomePage.routeName: (context) => HomePage(),
+  ProductPage.routeName: (context) => ProductPage(),
+  cartpage.routeName: (context) => cartpage(),
 };

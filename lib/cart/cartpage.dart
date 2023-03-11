@@ -2,6 +2,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
 class cartpage extends StatefulWidget {
+  static String routeName = "/cart_page";
+
   const cartpage({super.key});
 
   @override
