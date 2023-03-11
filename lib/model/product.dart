@@ -1,16 +1,40 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter/material.dart';
 
-class Products extends StatefulWidget {
-  const Products({super.key});
+class Products {
+  int id;
+  String title;
+  String description;
+  String image;
+  double price;
 
-  @override
-  State<Products> createState() => _ProductsState();
-}
+  Products(
+      {required this.id,
+      required this.title,
+      required this.description,
+      required this.image,
+      required this.price});
 
-class _ProductsState extends State<Products> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
+  static List<Products> init() {
+    List<Products> data = [
+      Products(
+          id: 1,
+          title: "Test title",
+          description: "Test description",
+          image: "assets/foods/ic_back_coffe",
+          price: 8.0),
+      Products(
+          id: 2,
+          title: "Test title 2",
+          description: "Test description",
+          image: "assets/foods/ic_back_coffe",
+          price: 8.0),
+      Products(
+          id: 3,
+          title: "Test title 3",
+          description: "Test description",
+          image: "assets/foods/ic_back_coffe",
+          price: 8.0),
+    ];
+    return data;
   }
 }

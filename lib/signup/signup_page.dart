@@ -1,8 +1,10 @@
 import './components/body.dart';
 import 'package:flutter/material.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class SignUpPage extends StatelessWidget {
+  static String routeName = "/sign_up";
+
+  const SignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {

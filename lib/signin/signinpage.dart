@@ -9,10 +9,10 @@ import 'package:app/signup/signupsreen.dart';
 
 import '../components/body.dart';
 
-class singinpage extends StatelessWidget {
+class SingInPage extends StatelessWidget {
   static String routeName = "/sign_in";
 
-  const singinpage({super.key});
+  const SingInPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
