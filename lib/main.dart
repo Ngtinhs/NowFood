@@ -1,3 +1,4 @@
+import 'package:app/homepage/homepage.dart';
 import 'package:app/splashPage.dart';
 import 'package:flutter/material.dart';
 import './splashPage.dart';
@@ -24,14 +25,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'My App',
       home: Scaffold(
         appBar: AppBar(
           title: const Text('My App'),
         ),
         body: Center(
-          child: SplashPage(),
-        ),
+            // child: SplashPage(),
+            child: HomePage()),
       ),
     );
   }
