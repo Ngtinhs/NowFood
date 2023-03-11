@@ -8,7 +8,7 @@ class Products {
   double price;
 
   Products(
-      {required this.id,
+      {this.id = 0,
       required this.title,
       required this.description,
       required this.image,

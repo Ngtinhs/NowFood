@@ -1,12 +1,13 @@
+import 'package:app/signup/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:app/homepage/homepage.dart';
 import 'package:app/model/utilities.dart';
-// import 'package:app/model/user.dart';
+import 'package:app/model/user.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-// import '../signup/signupsreen.dart';
+import '../signup/signupsreen.dart';
 
 class SignInForm extends StatefulWidget {
   const SignInForm({super.key});
@@ -80,7 +81,7 @@ class _SignInFormState extends State<SignInForm> {
                   children: [
                     TextFormField(
                       validator: (value) {
-                        return utilities.validatePasswords(value);
+                        return Utilities.validatePassword(value!);
                       },
                       onSaved: (value) {
                         setState(() {
@@ -99,7 +100,7 @@ class _SignInFormState extends State<SignInForm> {
                     TextFormField(
                       controller: password,
                       validator: (value) {
-                        return utilities.validatePasswords(value);
+                        return Utilities.validatePassword(value!);
                       },
                       keyboardType: TextInputType.number,
                       obscureText: true,
@@ -195,15 +196,16 @@ class _SignInFormState extends State<SignInForm> {
                         ),
                         GestureDetector(
                             onTap: () async {
-                              final result = await Navigator.pushNamed(
+                              final Object? result = await Navigator.pushNamed(
                                   context, SignUpPage.routeName);
-                              User user = result;
+
+                              User user = result as User;
                               username.text = user.username;
                             },
                             child: const Text(
                               "Sign Up",
                               style: TextStyle(
-                                  color: Colors.redAccent, fontWeight: 14),
+                                  color: Colors.redAccent, fontSize: 14),
                             ))
                       ],
                     )
