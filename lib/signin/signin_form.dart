@@ -191,7 +191,7 @@ class _SignInFormState extends State<SignInForm> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Text(
-                          "ABc",
+                          "ABC",
                           style: TextStyle(color: Colors.green, fontSize: 14),
                         ),
                         GestureDetector(
