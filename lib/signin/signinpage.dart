@@ -7,7 +7,7 @@ import 'package:app/signup/signupsreen.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 // import 'package:fluttertoast/fluttertoast.dart';
 
-import '../components/body.dart';
+import 'components/body.dart';
 
 class SingInPage extends StatelessWidget {
   static String routeName = "/sign_in";
